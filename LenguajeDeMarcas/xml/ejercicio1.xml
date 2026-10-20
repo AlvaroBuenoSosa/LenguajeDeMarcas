@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE consecesionarios>
+<concesionarios>
+<concesionario>
+
+
+    <!-- CONCESIONARIO 1: PACO -->
+
+    
+        <nombre>concesionario Paco</nombre>
+        <direccion>Gines</direccion>
+        <telefono>+34 687164567</telefono>
+        <estado_actual estado="abierto"/>
+        
+        <categorias_disponibles>
+            <categoria>Urbano</categoria>
+            <categoria>Turismo</categoria>
+            <categoria>Turismo Segunda Mano</categoria>
+            <categoria>Utilitario</categoria>
+        </categorias_disponibles>
+
+        <vehiculos>
+            <vehiculo id="SE001">
+                <marca nombreComercial="Seat S.A." PaisOrigen="España"/>
+                <modelo>ibiza</modelo>
+                <añofabricacion>1997</añofabricacion>
+                <categoria>Turismo Segunda Mano</categoria>
+                
+                <reservado_a>
+                    <particular>
+                        <dni>46859132F</dni>
+                        <nombre>Antonio</nombre>
+                        <apellidos>Dominguez Velasquez</apellidos>
+                        <direccion>Calle real 234</direccion>
+                        <telefonos>
+                            <telefono>679012345</telefono>
+                            <telefono>956214567</telefono>
+                        </telefonos>
+                    </particular>
+                    <fecha_reserva>1997-05-12</fecha_reserva>
+                    <fecha_prevista_entrega>1997-05-20</fecha_prevista_entrega>
+                </reservado_a>
+            </vehiculo>
+
+
+            <vehiculo id="RE002">
+                <marca nombreComercial="Renault S.A." PaisOrigen="Francia"/>
+                <modelo>Clio</modelo>
+                <añofabricacion>2003</añofabricacion>
+                <categoria>Turismo</categoria>
+                <reservado_a>
+                    <empresa>
+                        <cif>dwghu9gu</cif>
+                        <razonsocial>necesidad</razonsocial>
+                        <direccion>calle verdadera 32</direccion>
+                        <telefonos>
+                            <telefono>687813245</telefono>
+                            <telefono>966441234</telefono>
+                        </telefonos>
+                        <persona_contacto>
+                            <nombre>Antonio</nombre>
+                            <apellido>Dominguez</apellido>
+                        </persona_contacto>
+                    </empresa>
+                    <fecha_reserva>2026-09-23</fecha_reserva>
+                    <fecha_prevista_entrega>2026-09-29</fecha_prevista_entrega>
+                </reservado_a>
+            </vehiculo>
+
+
+            <vehiculo id="FI003">
+                <marca nombreComercial="Fiat S.A." PaisOrigen="España"/>
+                <modelo>Punto</modelo>
+                <añofabricacion>2008</añofabricacion>
+                <categoria>Utilitario</categoria>
+            </vehiculo>
+        </vehiculos>
+    </concesionario>
+
+
+    <!-- CONCESIONARIO 2: TORNILLO -->
+
+    <concesionario>
+        <nombre>concesionario Tornillo</nombre>
+        <direccion>Coria</direccion>
+        <telefono>+34 678145234</telefono>
+        
+        <estado_actual estado="cerrado"/>
+        
+        <categorias_disponibles>
+            <categoria>Berlina</categoria>
+            <categoria>Motocicleta</categoria>
+        </categorias_disponibles>
+
+        <vehiculos>
+
+            <vehiculo id="VW004">
+                <marca nombreComercial="Volkswagen S.A." PaisOrigen="Alemania"/>
+                <modelo>Pasat</modelo>
+                <añofabricacion>1997</añofabricacion>
+                <categoria>Berlina</categoria>
+                <reservado_a>
+                    <particular>
+                        <dni>46823132F</dni>
+                        <nombre>Jose</nombre>
+                        <apellidos>Martinez Dominguez</apellidos>
+                        <direccion>Calle falsa 234</direccion>
+                        <telefonos>
+                            <telefono>687456234</telefono>
+                            <telefono>955667891</telefono>
+                        </telefonos>
+                    </particular>
+                    <fecha_reserva>2027-08-23</fecha_reserva>
+                    <fecha_prevista_entrega>2027-09-26</fecha_prevista_entrega>
+                </reservado_a>
+            </vehiculo>
+
+
+            <vehiculo id="YA005">
+                <marca nombreComercial="Yamaha S.A." PaisOrigen="Italia"/>
+                <modelo>r1</modelo>
+                <añofabricacion>2010</añofabricacion>
+                <categoria>Motocicleta</categoria>
+            </vehiculo>
+        </vehiculos>
+    </concesionario>
+</concesionarios>

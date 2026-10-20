@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 8 - Envío de ficheros</title>
+</head>
+<body>
+    <h1>Actividad 8: subir un fichero</h1>
+    <p>
+        Usa un texto de prueba y un fichero sin datos personales. Cada formulario envía
+        los datos a <code>https://httpbin.org/post</code> y muestra la respuesta aquí.
+    </p>
+
+    <section>
+        <h2>1. Envío con <code>multipart/form-data</code></h2>
+        <form action="https://httpbin.org/post" method="post"
+              enctype="multipart/form-data" target="respuesta">
+            <p>
+                <label for="texto-multipart">Texto:</label>
+                <input type="text" id="texto-multipart" name="texto" required>
+            </p>
+            <p>
+                <label for="fichero-multipart">Fichero:</label>
+                <input type="file" id="fichero-multipart" name="fichero" required>
+            </p>
+            <button type="submit">Enviar con multipart</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>2. Envío sin atributo <code>enctype</code></h2>
+        <form action="https://httpbin.org/post" method="post" target="respuesta">
+            <p>
+                <label for="texto-urlencoded">Texto:</label>
+                <input type="text" id="texto-urlencoded" name="texto" required>
+            </p>
+            <p>
+                <label for="fichero-urlencoded">Fichero:</label>
+                <input type="file" id="fichero-urlencoded" name="fichero" required>
+            </p>
+            <button type="submit">Enviar sin enctype</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Respuesta de httpbin</h2>
+        <p>Tras enviar cualquiera de los formularios, consulta el JSON de respuesta:</p>
+        <iframe name="respuesta" title="Respuesta JSON de httpbin" width="100%" height="400">
+            Tu navegador no permite mostrar la respuesta en esta página.
+        </iframe>
+    </section>
+
+    <section>
+        <h2>Qué comparar</h2>
+        <ol>
+            <li>
+                Envía ambos formularios con el mismo texto y el mismo fichero.
+                La respuesta del primero debe incluir el texto en <code>form</code>
+                y el contenido del fichero en <code>files</code>.
+            </li>
+            <li>
+                En el segundo, el navegador usa el tipo predeterminado
+                <code>application/x-www-form-urlencoded</code>. El texto aparece en
+                <code>form</code>; el fichero no se sube y <code>files</code> queda vacío.
+                El nombre del fichero puede aparecer como valor del campo en <code>form</code>.
+            </li>
+            <li>
+                Abre las herramientas de desarrollador, selecciona la pestaña
+                <strong>Red</strong> y revisa la cabecera <code>Content-Type</code> de cada
+                petición. La primera será <code>multipart/form-data</code> con un separador
+                <code>boundary</code>; la segunda será
+                <code>application/x-www-form-urlencoded</code>.
+            </li>
+        </ol>
+    </section>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+</head>
+<body>
+    <h1>Formulario de registro</h1>
+    <form action="registro.php" method="post">
+        <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </p>
+        <p>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+        </p>
+        <p>
+            <label for="pass">Contraseña:</label>
+            <input type="password" id="pass" name="pass" autocomplete="new-password" required>
+            <button type="button" id="toggle-password" aria-controls="pass" aria-pressed="false">Mostrar contraseña</button>
+        </p>
+        <p>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono">
+        </p>
+        <fieldset>
+            <legend>Turno:</legend>
+            <input type="radio" id="turno-manana" name="turno" value="m" required>
+            <label for="turno-manana">Mañana</label>
+            <input type="radio" id="turno-tarde" name="turno" value="t">
+            <label for="turno-tarde">Tarde</label>
+        </fieldset>
+        <p>
+            <input type="checkbox" id="rgpd" name="rgpd" value="si" required>
+            <label for="rgpd">Acepto la política de privacidad</label>
+        </p>
+        <button type="submit">Registrarme</button>
+    </form>
+</body>
+</html>

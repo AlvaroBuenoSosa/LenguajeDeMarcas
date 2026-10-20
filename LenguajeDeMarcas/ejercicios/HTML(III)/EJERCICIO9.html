@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 9 - Auditoría de un formulario</title>
+</head>
+<body>
+    <h1>Actividad 9: auditoría de un formulario real</h1>
+    <h2>Formulario de creación de cuenta de GitHub</h2>
+    <p>
+        Referencia: <a href="https://github.com/signup">github.com/signup</a>.
+        El proceso de alta puede cambiar y mostrar los campos en varios pasos.
+        Esta tabla sirve como guía de auditoría: comprueba el formulario actual
+        con el inspector del navegador antes de entregar observaciones como verificadas.
+    </p>
+
+    <table>
+        <caption>Aspectos que revisar y mejoras posibles</caption>
+        <thead>
+            <tr>
+                <th scope="col">Aspecto</th>
+                <th scope="col">Qué comprobar</th>
+                <th scope="col">Valoración y mejora</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Tipos de campo</th>
+                <td>
+                    Identifica el tipo de cada control, por ejemplo correo electrónico,
+                    contraseña, nombre de usuario y casillas de verificación.
+                </td>
+                <td>
+                    Usar tipos adecuados ayuda al navegador a ofrecer validación y
+                    teclados apropiados. Comprueba que las contraseñas se marquen
+                    como <code>password</code> y que el correo tenga formato de email.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Etiquetas</th>
+                <td>
+                    Comprueba que cada campo tenga una etiqueta visible y asociada
+                    mediante <code>label</code> y <code>for</code>, o que esté
+                    correctamente nombrado de otra forma accesible.
+                </td>
+                <td>
+                    Las etiquetas claras facilitan el uso con lectores de pantalla
+                    y al seleccionar el campo. El texto de ayuda o el placeholder
+                    no deberían ser la única etiqueta.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Agrupación</th>
+                <td>
+                    Busca grupos relacionados de controles identificados con
+                    <code>fieldset</code> y <code>legend</code>.
+                </td>
+                <td>
+                    Agrupar opciones relacionadas aporta contexto, especialmente
+                    a quienes utilizan tecnologías de asistencia.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Autocompletado</th>
+                <td>
+                    Revisa los atributos <code>autocomplete</code>, por ejemplo
+                    <code>email</code>, <code>username</code> y
+                    <code>new-password</code>.
+                </td>
+                <td>
+                    Los valores apropiados ayudan a gestores de contraseñas y
+                    autocompletado. No conviene desactivarlos sin una razón concreta.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Validaciones</th>
+                <td>
+                    Prueba campos vacíos y valores incorrectos; revisa atributos
+                    como <code>required</code>, <code>type</code>,
+                    <code>minlength</code> y mensajes de error.
+                </td>
+                <td>
+                    Las reglas deben explicarse junto al campo y los errores deben
+                    indicar cómo corregirlos. La validación del navegador mejora
+                    la experiencia, pero el servidor también debe validar los datos.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Método y destino</th>
+                <td>
+                    En el inspector revisa <code>method</code> y <code>action</code>;
+                    en la pestaña Red confirma el destino y que la conexión use HTTPS.
+                </td>
+                <td>
+                    HTTPS protege los datos durante el envío. No deduzcas el método
+                    o el destino solo por la apariencia de la página: el proceso
+                    puede enviar cada paso a una ruta distinta.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Campos ocultos</th>
+                <td>
+                    Busca controles <code>input type="hidden"</code> y revisa sus
+                    nombres y valores sin compartir tokens ni datos de sesión.
+                </td>
+                <td>
+                    Pueden transportar valores técnicos, como un token de seguridad
+                    o el estado del proceso. Su contenido depende de la sesión y no
+                    debe suponerse ni copiarse como si fuera permanente.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Consentimiento</th>
+                <td>
+                    Comprueba si hay una opción de comunicaciones promocionales y
+                    sepárala de la aceptación de condiciones y privacidad.
+                </td>
+                <td>
+                    El consentimiento promocional debe ser claro y opcional. No
+                    marques por defecto una casilla opcional ni confundas recibir
+                    publicidad con aceptar las condiciones necesarias para crear
+                    la cuenta.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Uso con teclado</th>
+                <td>
+                    Recorre el formulario con <kbd>Tab</kbd> y
+                    <kbd>Mayús</kbd> + <kbd>Tab</kbd>; usa
+                    <kbd>Espacio</kbd> para casillas y <kbd>Intro</kbd> para enviar.
+                </td>
+                <td>
+                    El foco debe ser visible, el orden debe ser lógico y todos los
+                    controles deben poder utilizarse sin ratón. Anota cualquier
+                    control que no reciba foco o cuyo estado no se entienda.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Conclusión</h2>
+    <p>
+        Una buena auditoría confirma estos aspectos en el formulario que se muestra
+        realmente, incluidos los pasos posteriores y los mensajes de error. La
+        estructura y los campos pueden cambiar según la sesión; por eso, los detalles
+        del inspector y de la pestaña Red deben anotarse durante la comprobación.
+    </p>
+</body>
+</html>

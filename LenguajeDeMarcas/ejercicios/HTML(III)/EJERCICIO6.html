@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 6 - Expresiones regulares</title>
+</head>
+<body>
+    <h1>Actividad 6: expresiones regulares</h1>
+    <p>En el atributo <code>pattern</code>, el navegador exige que toda la entrada coincida con el patrón.</p>
+
+    <section>
+        <h2>Matrícula española actual</h2>
+        <p>Patrón: <code>[0-9]{4}[BCDFGHJKLMNPRSTVWXYZ]{3}</code></p>
+        <p>Son cuatro cifras seguidas de tres consonantes. Se excluyen las vocales, la Ñ y la Q.</p>
+        <form>
+            <label for="matricula">Matrícula:</label>
+            <input type="text" id="matricula" name="matricula"
+                   pattern="[0-9]{4}[BCDFGHJKLMNPRSTVWXYZ]{3}"
+                   title="Escribe cuatro cifras y tres consonantes (sin vocales, Ñ ni Q)." required>
+            <button type="submit">Probar matrícula</button>
+        </form>
+        <p>Válidos: <code>1234BCD</code>, <code>0000BBB</code>, <code>9999XYZ</code>.</p>
+        <p>No válidos: <code>123ABC</code> (longitud), <code>1234AEI</code> (vocales), <code>1234ÑBQ</code> (Ñ y Q).</p>
+    </section>
+
+    <section>
+        <h2>IBAN español sin espacios</h2>
+        <p>Patrón de formato: <code>ES[0-9]{22}</code> (ES, dos dígitos de control y veinte dígitos de cuenta).</p>
+        <p>Además del formato, el formulario comprueba los dígitos de control del IBAN.</p>
+        <form id="form-iban">
+            <label for="iban">IBAN:</label>
+            <input type="text" id="iban" name="iban" pattern="ES[0-9]{22}"
+                   title="Escribe ES seguido de 22 cifras, sin espacios." required>
+            <button type="submit">Probar IBAN</button>
+        </form>
+        <p>Válidos: <code>ES4421000418450200005133</code>, <code>ES4200491512345678901234</code>, <code>ES6620801234000123456789</code>.</p>
+        <p>No válidos: <code>ES442100041845020005133</code> (longitud), <code>ES44 21000418450200005133</code> (espacio), <code>ES0021000418450200005133</code> (control incorrecto).</p>
+    </section>
+
+    <section>
+        <h2>Nombre de usuario</h2>
+        <p>Patrón: <code>[A-Za-zÁÉÍÓÚÜÑáéíóúüñ][A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9-]{3,19}</code></p>
+        <p>Empieza por una letra y tiene entre 4 y 20 caracteres. Después admite letras, cifras y guiones.</p>
+        <form>
+            <label for="usuario">Nombre de usuario:</label>
+            <input type="text" id="usuario" name="usuario"
+                   pattern="[A-Za-zÁÉÍÓÚÜÑáéíóúüñ][A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9-]{3,19}"
+                   title="De 4 a 20 caracteres; empieza por una letra y admite letras, cifras y guiones." required>
+            <button type="submit">Probar usuario</button>
+        </form>
+        <p>Válidos: <code>Ana1</code>, <code>usuario-2026</code>, <code>Álvaro9</code>.</p>
+        <p>No válidos: <code>1usuario</code> (empieza por cifra), <code>abc</code> (menos de 4 caracteres), <code>nombre_usuario</code> (guion bajo no permitido).</p>
+    </section>
+
+</body>
+</html>

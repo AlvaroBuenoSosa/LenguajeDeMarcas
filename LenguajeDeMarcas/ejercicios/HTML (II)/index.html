@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias · IES Ejemplo</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="contenedor">
+            <img src="img/logo.svg" alt="IES Ejemplo" width="160" height="48">
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="ciclos.html">Ciclos</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="contenedor">
+            <h1>Noticias del centro</h1>
+
+            <article class="noticia">
+                <header class="cabecera-noticia">
+                    <h2>El alumnado de DAM gana el hackathon provincial</h2>
+                    <p>Publicado el <span class="fecha">28 de septiembre de 2026</span> por Departamento de Informática</p>
+                </header>
+
+                <p>Un equipo de primero de <span class="sigla">DAM</span> ha ganado el primer premio con una aplicación para reservar las pistas deportivas del barrio.</p>
+
+                <section class="apartado">
+                    <h3>La aplicación</h3>
+                    <p>Permite consultar la disponibilidad en tiempo real y reservar desde el móvil. <span class="importante">El código es libre</span> y está publicado en GitHub.</p>
+                </section>
+
+                <section class="apartado">
+                    <h3>Próximos pasos</h3>
+                    <p>El ayuntamiento estudia ponerla en marcha en dos polideportivos municipales.</p>
+                </section>
+
+                <section class="pie-noticia">
+                    <p>Etiquetas: hackathon, DAM, premios</p>
+                </section>
+            </article>
+        </section>
+
+            <section class="ultimas">
+                <h2>Otras noticias</h2>
+                <div class="fila">
+                    <article class="noticia-breve">
+                        <h3>Abierto el plazo de FCT</h3>
+                        <p>Las empresas pueden enviar sus ofertas hasta el <span class="fecha">15 de octubre</span>.</p>
+                    </article>
+                    <article class="noticia-breve">
+                        <h3>Charla sobre ciberseguridad</h3>
+                        <p>El <span class="fecha">22 de octubre</span>, en el salón de actos.</p>
+                    </article>
+                </div>
+                <div class="boton" onclick="location.href='noticias.html'">Ver todas las noticias</div>
+            </section>
+
+            <aside class="lateral">
+                <h2>Agenda</h2>
+                <ul>
+                    <li>Reunión de familias: <span class="fecha">7 de octubre</span></li>
+                    <li>Fin de la primera evaluación: <span class="fecha">4 de diciembre</span></li>
+                </ul>
+            </aside>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <address class="contacto">
+                <p>IES Ejemplo · Calle Ficticia, 1 · 41000 Sevilla<br>
+                Teléfono: <a href="tel:+34954000000">954 000 000</a> · <a href="mailto:secretaria@iesejemplo.es">secretaria@iesejemplo.es</a></p>
+            </address>
+            <div class="legal">
+                <a href="privacidad.html">Política de privacidad</a> · <a href="accesibilidad.html">Declaración de accesibilidad</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+<!-- he puesto en el primer apartado class = cabecera decidi meter un header ya que es la cabecera del html , despues añadi nav para la para la clase menu para indicar que es un bloque de navegación
+ despues añadi un main para el contenido principal y un section para el contenido secundario como contenedor, ultimas y un aside para el contenido lateral, dentro del primer 
+ contenido principal section contenedor añadi un article en noticia con un header para la cabecera y 3 secciones para cada partado y pie de noticia, despues añadi otro seciton para el
+ segundo apartado "ultimas" y un article para cada noticia breve y en el siguiente añadi un aside para lateral por que es como algo informativo (reunion de familias y fin primera evalucacion
+ ) finalmente añadi un footer al ser el pie de pagina de la web con un address indicando el contacto, no implemente: un nav para legal en el footer porq para mi no es un nav,
+son enlaces sin mas para mostrar las páginas legales y deje el div contenedor del footer como div porque no me parece ni un article ni un section -->

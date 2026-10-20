@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 3</title>
+</head>
+<body>
+    <h1>Ejercicio 3: peticiones GET y POST</h1>
+    <p>Completa los tres campos y envía el formulario con cada botón. En las herramientas de desarrollo, abre la pestaña <strong>Red</strong> para comparar las peticiones.</p>
+
+    <form action="https://httpbin.org/get" method="get">
+        <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" value="Ada" required>
+        </p>
+        <p>
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" value="ada@example.com" required>
+        </p>
+        <p>
+            <label for="frase">Frase de prueba:</label>
+            <input type="text" id="frase" name="frase" value="café &amp; té = genial" required>
+        </p>
+        <button type="submit">Enviar con GET</button>
+        <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Enviar con POST</button>
+    </form>
+</body>
+</html>

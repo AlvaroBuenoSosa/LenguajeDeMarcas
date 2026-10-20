@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 10 - Formularios</title>
+</head>
+<body>
+    <section>
+        <h2>Formulario de contacto</h2>
+        <form action="https://httpbin.org/post" method="post" target="respuesta-contacto">
+            <p>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre"
+                       autocomplete="name" required>
+            </p>
+            <p>
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo"
+                       autocomplete="email" required>
+            </p>
+            <p>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono"
+                       autocomplete="tel" minlength="9" maxlength="15">
+            </p>
+            <p>
+                <label for="fecha">Fecha preferida de contacto:</label>
+                <input type="date" id="fecha" name="fecha">
+            </p>
+            <p>
+                <label for="asunto">Asunto:</label>
+                <select id="asunto" name="asunto" required>
+                    <option value="">Selecciona un asunto</option>
+                    <option value="informacion">Solicitar información</option>
+                    <option value="incidencia">Comunicar una incidencia</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </p>
+            <fieldset>
+                <legend>Medio de respuesta preferido:</legend>
+                <input type="radio" id="respuesta-correo" name="medio-respuesta"
+                       value="correo" required>
+                <label for="respuesta-correo">Correo electrónico</label>
+                <input type="radio" id="respuesta-telefono" name="medio-respuesta"
+                       value="telefono">
+                <label for="respuesta-telefono">Teléfono</label>
+            </fieldset>
+            <p>
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="5" cols="40"
+                          minlength="10" maxlength="1000" required></textarea>
+            </p>
+            <p>
+                <input type="checkbox" id="privacidad" name="privacidad"
+                       value="aceptada" required>
+                <label for="privacidad">
+                    He leído la información de privacidad y acepto el tratamiento
+                    de estos datos para responder a mi consulta.
+                </label>
+            </p>
+            <button type="submit">Enviar consulta de prueba</button>
+        </form>
+        <h3>Respuesta del formulario de contacto</h3>
+        <iframe name="respuesta-contacto" title="Respuesta de httpbin al formulario de contacto"
+                width="100%" height="300">
+            Tu navegador no permite mostrar aquí la respuesta.
+        </iframe>
+    </section>
+
+    <section>
+        <h2>Buscador</h2>
+        <form action="https://httpbin.org/get" method="get" target="respuesta-busqueda">
+            <label for="busqueda">Término de búsqueda:</label>
+            <input type="search" id="busqueda" name="q" required>
+            <button type="submit">Buscar</button>
+        </form>
+        <h3>Respuesta del buscador</h3>
+        <iframe name="respuesta-busqueda" title="Respuesta de httpbin al buscador"
+                width="100%" height="300">
+            Tu navegador no permite mostrar aquí la respuesta.
+        </iframe>
+    </section>
+
+</body>
+</html>

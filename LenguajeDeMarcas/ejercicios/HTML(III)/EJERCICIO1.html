@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 1</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <fieldset>
+        <form action="mailto:" method="post" enctype="text/plain">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required>
+        </form>
+            <form action="mailto:" method="post" enctype="text/plain">
+                <label for="postal">Código postal</label>
+                <input type="text" id="postal" name="postal" pattern="[0-9]{5}" required>
+            </form>
+            <form>
+                <label for="asistente">Número de asistentes a la cena</label>
+                <input type="number" id="asistente" name="asistente" min="1" max="8" required>
+            </form>
+            <form>
+                <label for="fecha">Fecha de la cita</label>
+                <input type="date" id="fecha" name="fecha" min="2026-11-01" required>
+            </form>
+            <form>
+                <label for="provincia">Provincia de residencia:</label>
+                <select id="provincia" name="provincia" required>
+                    <option value="">Seleccione una provincia</option>
+                    <option value="Madrid">Madrid</option>
+                    <option value="Sevilla">Sevilla</option>
+                    <option value="Valencia">Valencia</option>
+                </select>
+            </form>
+            <form>
+                <label for="satisfaccion">Nivel de satisfacción</label>
+                <input type="number" id="satisfaccion" name="satisfaccion" min="1" max="10" required>
+            </form>
+            <form>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" minlength="12" required>
+            </form>
+            <form>
+                <label for="comentarios">Comentarios</label>
+                <textarea id="comentarios" name="comentarios" maxlength="300" required></textarea>
+            </form>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Restablecer">
+
+    </fieldset>
+    
+</body>
+</html>

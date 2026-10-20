@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 7</title>
+</head>
+<body>
+    <h1>Actividad 7: saltarse la validación del navegador</h1>
+    <p>
+        Este formulario de prueba envía los datos a <code>https://httpbin.org/post</code>.
+        Las reglas son solo un ejemplo de validación del lado del cliente: nombre obligatorio,
+        fecha de nacimiento anterior a 2008 y motivación de hasta 500 caracteres.
+        Usa datos ficticios.
+    </p>
+
+    <form action="https://httpbin.org/post" method="post" target="respuesta">
+        <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </p>
+        <p>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos">
+        </p>
+        <p>
+            <label for="nacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="nacimiento" name="nacimiento"
+                   max="2007-12-31" required>
+        </p>
+        <p>
+            <label for="motivacion">Motivación (máximo 500 caracteres):</label><br>
+            <textarea id="motivacion" name="motivacion" maxlength="500" rows="5" cols="50"></textarea>
+        </p>
+        <button type="submit">Enviar inscripción de prueba</button>
+    </form>
+
+    <h2>Prueba 1: cambiar el formulario con el inspector</h2>
+    <ol>
+        <li>Abre las herramientas de desarrollador y selecciona el formulario.</li>
+        <li>Quita <code>required</code> de Nombre y Fecha, elimina <code>max</code> de la fecha y <code>maxlength</code> de la motivación.</li>
+        <li>Deja Nombre vacío, escribe <code>2020-01-01</code> como fecha y pega una motivación de 2000 caracteres. Envía el formulario.</li>
+        <li>En la respuesta de abajo, comprueba los valores recibidos en el objeto <code>form</code>.</li>
+    </ol>
+
+    <h2>Prueba 2: guardar y editar una copia</h2>
+    <ol>
+        <li>Guarda una copia de este archivo y ábrela en VS Code.</li>
+        <li>En la copia, elimina <code>required</code>, el atributo <code>max</code> y el atributo <code>maxlength</code> del formulario.</li>
+        <li>Abre la copia en el navegador, envía los mismos valores de prueba y revisa <code>form</code> en la respuesta.</li>
+    </ol>
+
+    <h2>Prueba 3: enviar datos sin el formulario</h2>
+    <p>
+        En una terminal con curl, envía los campos directamente. Sustituye el texto entre
+        corchetes por una cadena de exactamente 2000 caracteres:
+    </p>
+    <pre><code>curl -X POST -d "apellidos=Prueba&amp;nacimiento=2020-01-01&amp;motivacion=[texto de 2000 caracteres]" https://httpbin.org/post</code></pre>
+    <p>
+        La petición no incluye el campo <code>nombre</code>. Revisa el JSON que devuelve
+        httpbin; no se ha enviado a un sistema de inscripciones real.
+    </p>
+
+    <h2>Respuesta de httpbin</h2>
+    <iframe name="respuesta" title="Respuesta de httpbin" width="100%" height="400">
+        Tu navegador no permite mostrar la respuesta aquí.
+    </iframe>
+
+    <h2>Conclusiones</h2>
+    <ol>
+        <li>Los atributos HTML de validación ayudan a detectar errores antes de enviar el formulario.</li>
+        <li>La validación del navegador se puede modificar y no debe considerarse una barrera de seguridad.</li>
+        <li>Una petición puede construirse fuera del formulario y omitir campos o límites del navegador.</li>
+        <li>El servidor debe comprobar por sí mismo los campos obligatorios, formatos, fechas y longitudes.</li>
+        <li>El servidor debe rechazar datos inválidos y no confiar en que el cliente haya aplicado las reglas.</li>
+    </ol>
+</body>
+</html>
