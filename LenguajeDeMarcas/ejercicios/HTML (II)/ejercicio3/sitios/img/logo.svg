@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 72" role="img" aria-labelledby="title">
+  <title id="title">IES Ejemplo</title>
+  <rect width="72" height="72" rx="14" fill="#174a7e"/>
+  <path d="M17 48V23h8l11 15V23h8v25h-8L25 33v15zm31 0V23h21v7H56v3h12v6H56v3h13v6z" fill="#fff"/>
+  <text x="84" y="34" fill="#174a7e" font-family="Arial, sans-serif" font-size="20" font-weight="700">IES Ejemplo</text>
+  <text x="84" y="54" fill="#526579" font-family="Arial, sans-serif" font-size="12">Ciclos formativos</text>
+</svg>

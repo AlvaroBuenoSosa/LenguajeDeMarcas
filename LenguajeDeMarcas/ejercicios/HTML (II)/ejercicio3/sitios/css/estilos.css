@@ -1,0 +1,14 @@
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #0000ee; 
+}
+
+
+a:visited {
+    color: #0000ee; 
+}
