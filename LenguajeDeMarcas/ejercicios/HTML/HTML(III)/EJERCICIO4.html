@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción en la jornada de puertas abiertas · IES Ejemplo</title>
+</head>
+<body>
+<main>
+<h1>Inscripción en la jornada de puertas abiertas</h1>
+
+<form action="https://httpbin.org/get" method="get">
+    <fieldset>
+        <legend>Tus datos</legend>
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" value="Lucía">
+
+        <label for="apellidos">Apellidos (obligatorio)</label>
+        <input type="text" id="apellidos" name="apellidos" required>
+
+        <label for="email">Correo del centro</label>
+        <input type="email" id="email" name="email" value="lucia@iesejemplo.es" readonly>
+
+        <label for="dni">DNI</label>
+        <input type="text" id="dni" name="dni" value="12345678Z" disabled>
+
+        <label for="codigo">Código de invitación</label>
+        <input type="text" id="codigo" value="ABC123">
+    </fieldset>
+
+    <fieldset disabled>
+        <legend>Datos del tutor (solo menores de edad)</legend>
+        <label for="tutor">Nombre del tutor</label>
+        <input type="text" id="tutor" name="tutor" value="Pedro">
+    </fieldset>
+
+    <fieldset>
+        <legend>La jornada</legend>
+
+        <label for="fecha">Día</label>
+        <input type="date" id="fecha" name="fecha" value="2026-11-20">
+
+        <fieldset>
+            <legend>Turno</legend>
+            <input type="radio" id="turno-m" name="turno" value="manana">
+            <label for="turno-m">Mañana</label>
+            <input type="radio" id="turno-t" name="turno" value="tarde">
+            <label for="turno-t">Tarde</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Taller</legend>
+            <input type="radio" id="taller-web" name="taller" value="web" checked>
+            <label for="taller-web">Desarrollo web</label>
+            <input type="radio" id="taller-red" name="taller" value="redes">
+            <label for="taller-red">Redes</label>
+        </fieldset>
+
+        <input type="checkbox" id="comida" name="comida" checked>
+        <label for="comida">Me quedo a comer</label>
+
+        <input type="checkbox" id="parking" name="parking" value="si">
+        <label for="parking">Necesito aparcamiento</label>
+
+        <label for="ciclo">Ciclo que te interesa</label>
+        <select id="ciclo" name="ciclo">
+            <option value="smr">SMR</option>
+            <option value="daw">DAW</option>
+            <option selected>DAM</option>
+        </select>
+
+        <label for="intereses">Temas (puedes elegir varios)</label>
+        <select id="intereses" name="intereses" multiple>
+            <option value="ia" selected>Inteligencia artificial</option>
+            <option value="videojuegos">Videojuegos</option>
+            <option value="ciberseguridad" selected>Ciberseguridad</option>
+        </select>
+
+        <label for="nivel">Nivel de programación (0 a 10)</label>
+        <input type="range" id="nivel" name="nivel" min="0" max="10">
+
+        <label for="color">Color de tu acreditación</label>
+        <input type="color" id="color" name="color">
+
+        <label for="comentario">Comentarios</label>
+        <textarea id="comentario" name="comentario" rows="3">Voy con Luis &amp; Marta</textarea>
+
+        <input type="hidden" name="origen" value="cartel">
+    </fieldset>
+
+    <button type="button" name="extra" value="vista">Vista previa</button>
+    <button type="submit" name="accion" value="borrador" formnovalidate>Guardar borrador</button>
+    <button type="submit" name="accion" value="enviar">Enviar inscripción</button>
+</form>
+</main>
+</body>
+</html>
