@@ -1,0 +1,64 @@
+.twitter{
+    color : #FFFFFF;
+    background-color: #1D9BF0; /*1fa4fd*/
+     /* al probar el AA Y EL AAA lo corrige cambiando el contraste de las letras para que sea mas visible*/
+
+} 
+
+.twitterButton{
+  background-color: rgba(7, 7, 7, 0.6); 
+  color: #ffffff;            
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 15px;      
+  padding: 10px 20px;
+  border-radius: 9999px;    
+  cursor: pointer;
+   /* al probar el AA Y EL AAA lo corrige cambiando el contraste de las letras para que sea mas visible*/
+
+}
+
+.youtube{
+    color : #AAAAAA; /* #3e3e3e */
+    background-color: #0F0F0F;
+     /* al probar el AA Y EL AAA lo corrige cambiando el contraste de las letras para que sea mas visible*/
+
+}
+
+.youtubeButton{
+  background-color: rgba(255, 0, 0, 0.6); 
+  color: #ffffff;            
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 15px;      
+  padding: 10px 20px;
+  border-radius: 9999px;    
+  cursor: pointer;
+   /* al probar el AA Y EL AAA lo corrige cambiando el contraste de las letras para que sea mas visible*/
+
+}
+
+.instagram{
+  color: #a8a8a8;       
+  background-color: #000000
+   /* al probar el AA Y EL AAA lo corrige cambiando el contraste de las letras para que sea mas visible*/
+
+
+}
+
+.instagramButtom{
+  background-color: rgba(255, 94, 0, 0.6); 
+  color: #ffffff;            
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 15px;      
+  padding: 10px 20px;
+  border-radius: 9999px;    
+  cursor: pointer;
+   /* al probar el AA Y EL AAA lo corrige cambiando el contraste de las letras para que sea mas visible*/
+
+}
+

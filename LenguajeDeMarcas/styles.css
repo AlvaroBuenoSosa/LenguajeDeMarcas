@@ -1,0 +1,40 @@
+nav li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  background-image: url("icons8-real-madrid-96.png");
+  height: 96px;
+}
+
+div {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaqUR2nd2hJp1Uu3gqrluxbXd3w5PUw9JxHB5teocWvA&s=10");
+
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  width: 600px;
+}
+
+.video-container{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaqUR2nd2hJp1Uu3gqrluxbXd3w5PUw9JxHB5teocWvA&s=10");
+}

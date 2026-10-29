@@ -1,0 +1,5 @@
+#aviso { color: purple; }
+main p { color: green; }
+p.nota.importante { color: orange; }
+.nota { color: blue; }
+p { color: black; }
