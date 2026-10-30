@@ -78,6 +78,52 @@
         </section>
 </article>
 
+<form>
+    <h1>Inscripción 1º DAM</h1>
+
+    <label for="nombre">Nombre completo</label>
+    <input type="text" id="nombre" name="nombre"
+           placeholder="Introduce tu nombre" required>
+
+    <label for="email">Correo electrónico</label>
+    <input type="email" id="email" name="email"
+           placeholder="ejemplo@gmail.com" required>
+
+    <label for="telefono">Teléfono</label>
+    <input type="tel" id="telefono" name="telefono"
+           placeholder="600123456" required>
+
+    <label for="edad">Edad</label>
+    <input type="number" id="edad" name="edad"
+           min="16" max="99" required>
+
+    <label for="modalidad">Modalidad del curso</label>
+    <select id="modalidad" name="modalidad" required>
+        <option value="">Selecciona una opción</option>
+        <option value="presencial">Presencial</option>
+        <option value="online">Online</option>
+        <option value="semipresencial">Semipresencial</option>
+    </select>
+
+    <label for="modulo">Módulo favorito</label>
+    <select id="modulo" name="modulo">
+        <option>Programación</option>
+        <option>Bases de Datos</option>
+        <option>Lenguajes de Marcas</option>
+        <option>Sistemas Informáticos</option>
+    </select>
+
+    <label for="centro">Centro educativo</label>
+    <input type="text" id="centro" name="centro"
+           value="IES Martinez Montañes" disabled>
+
+    <label for="comentarios">¿Por qué quieres estudiar DAM?</label>
+    <textarea id="comentarios" name="comentarios"
+              placeholder="Escribe tus motivos..."></textarea>
+
+    <button type="submit">Enviar inscripción</button>
+</form>
+
     <footer>
         <p>Proyecto educativo sobre Desarrollo de Aplicaciones Multiplataforma.</p>
         <p>Para aprender HTML también consulto la <a href="https://developer.mozilla.org/es/docs/Web/HTML">guía de HTML de MDN</a>.</p>

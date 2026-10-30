@@ -1,14 +1,12 @@
 :root {
-
---color-primary: #1e3a8a;     
---color-secondary: #0d9488;    
---color-accent: #b45309;       
---color-bg: #f8fafc;         
---color-text: #1e293b;         
---color-border: #cbd5e1;       
---color-disabled: #94a3b8;     
---color-invalid: #dc2626;      
-
+    --color-primary: #1e3a8a;
+    --color-secondary: #0d9488;
+    --color-accent: #b45309;
+    --color-bg: #f8fafc;
+    --color-text: #1e293b;
+    --color-border: #cbd5e1;
+    --color-disabled: #94a3b8;
+    --color-invalid: #dc2626;
 }
 
 body{
@@ -124,4 +122,79 @@ footer{
     align-items: center;
     align-content: center;
     flex-direction: row;
+}
+
+form {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2457a6;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        label:has(+ input:required),
+        label:has(+ select:required),
+        label:has(+ textarea:required) {
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        input:user-invalid,
+        select:user-invalid,
+        textarea:user-invalid {
+            border: 2px solid red;
+            background-color: #ffeaea;
+        }
+
+        input:disabled,
+        select:disabled {
+            background-color: #ddd;
+            color: #777;
+            cursor: not-allowed;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background: #2457a6;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #163d79;
+        }
+
+        @media (prefers-color-scheme: dark) {
+        :root {
+        --color-primary: #93c5fd;
+        --color-secondary: #5eead4;
+        --color-accent: #fbbf24;
+        --color-bg: #0f172a;
+        --color-text: #f1f5f9;
+        --color-border: #64748b;
+        --color-disabled: #94a3b8;
+        --color-invalid: #fca5a5;
+    }
 }

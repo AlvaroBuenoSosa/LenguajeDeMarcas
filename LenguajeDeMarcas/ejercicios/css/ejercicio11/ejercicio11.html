@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+
+        li:not(:last-child) {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+        }
+
+
+        h2 + p {
+            font-weight: bold;
+        }
+
+
+        a[href$=".pdf"]::after {
+            content: " (PDF)";
+        }
+
+
+        a[href^="http"]::before {
+            content: "↗ ";
+        }
+
+
+        article:has(img) {
+            border: 2px solid #3498db;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+
+        fieldset:has(:invalid) {
+            border: 2px solid red;
+            background-color: #fff0f0;
+        }
+
+
+        li::marker {
+            color: #e63946;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de CSS</h1>
+
+    <h2>1. Lista con separadores</h2>
+    <ul>
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+        <li>Tercer elemento</li>
+    </ul>
+
+    <h2>2. Párrafo en negrita</h2>
+    <p>Este párrafo aparece en negrita porque sigue directamente a un h2.</p>
+    <p>Este párrafo no aparece en negrita.</p>
+
+    <h2>3. Enlaces PDF y externos</h2>
+    <p>
+        <a href="documento.pdf">Descargar documento</a>
+    </p>
+    <p>
+        <a href="https://www.google.com">Visitar Google</a>
+    </p>
+    <p>
+        <a href="pagina.html">Enlace interno</a>
+    </p>
+
+    <h2>4. Artículos con imágenes</h2>
+    <article>
+        <h3>Artículo con imagen</h3>
+        <img src="https://placehold.co/200x120"
+             alt="Imagen de ejemplo">
+        <p>Este artículo tiene un borde porque contiene una imagen.</p>
+    </article>
+
+    <article>
+        <h3>Artículo sin imagen</h3>
+        <p>Este artículo no tiene borde.</p>
+    </article>
+
+    <h2>5. Formulario con validación</h2>
+    <form>
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+
+            <br><br>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" required>
+
+            <br><br>
+
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+
+    <h2>6. Listas con viñetas de color</h2>
+    <ul>
+        <li>Manzana</li>
+        <li>Plátano</li>
+        <li>Naranja</li>
+    </ul>
+    
+</body>
+</html>
