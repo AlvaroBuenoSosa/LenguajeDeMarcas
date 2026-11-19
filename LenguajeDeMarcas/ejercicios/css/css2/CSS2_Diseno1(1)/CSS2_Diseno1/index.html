@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinco cosas que tu web le debe a un lector de pantalla</title>
+    <!-- Aquí van los <link> de Google Fonts -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="cabecera">
+        <p class="categoria">Accesibilidad</p>
+        <h1>Cinco cosas que tu web le debe a un lector de pantalla</h1>
+        <p class="autoria">Bitácora del departamento · 16 de noviembre</p>
+    </header>
+
+    <main class="articulo">
+        <p class="entradilla">Un lector de pantalla no ve tu diseño: lee tu HTML. Si la estructura es buena, la página se entiende aunque no se vea nada.</p>
+
+        <h2>Títulos en orden</h2>
+        <p>Quien usa un lector de pantalla salta de título en título para hacerse una idea de la página, igual que tú la recorres con la vista. Si te saltas niveles o eliges un <code>h3</code> porque «se ve más pequeño», ese índice deja de tener sentido. Repasa el <a href="https://www.w3.org/WAI/tutorials/page-structure/headings/">tutorial de títulos del W3C</a>.</p>
+        <blockquote>
+            <p>El aspecto lo decide CSS. La etiqueta se elige por lo que significa.</p>
+        </blockquote>
+
+        <h2>Listas que son listas</h2>
+        <p>Un menú, una lista de requisitos o un índice son listas, aunque no lleven viñetas. Marcarlas como tales permite al lector anunciar cuántos elementos hay:</p>
+        <ul>
+            <li>Menús de navegación.</li>
+            <li>Pasos de un proceso.</li>
+            <li>Grupos de enlaces del pie.</li>
+        </ul>
+
+        <h2>Cómo revisar tu página</h2>
+        <ol class="pasos">
+            <li>Desactiva la hoja de estilos y lee la página de arriba abajo.</li>
+            <li>Recórrela solo con el tabulador.</li>
+            <li>Comprueba que todas las imágenes tienen <code>alt</code>.</li>
+            <li>Pásala por el validador del W3C.</li>
+        </ol>
+
+        <p class="nota">¿Quieres probarlo de verdad? Windows trae Narrador (Ctrl + Windows + Intro) y en Linux tienes Orca.</p>
+    </main>
+
+    <footer class="pie">
+        <p>Bitácora del departamento de Informática</p>
+    </footer>
+</body>
+</html>

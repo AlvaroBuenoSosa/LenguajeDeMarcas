@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <h1>Inscripción en una ruta</h1>
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <div class="Datos">
+                    <label for="name">Nombre y apellidos </label>
+                    <input type="text" name="name" id="name" required />
+                </div>
+                <div class="Email">
+                    <label for="email">Correo electrónico </label>
+                    <input type="email" name="email" id="email" required />
+                </div>
+                <div class="Teléfono">
+                    <label for="tel">Telefóno (9 cifras) </label>
+                    <input type="number" name="tel" min="9" max="9" id="tel" />
+                </div>
+                <div class="fecha-nac">
+                    <label for="date">Fecha Nacimiento </label>
+                    <input type="date" name="date" id="date" required />
+                </div>
+                <div class="codigo-socio">
+                    <label for="email">Código de socio </label>
+                    <input type="email" name="email" id="email" required placeholder="pendiente" />
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>La Ruta</legend>
+                <div class="Ruta">
+                    <label for="ruta">Ruta </label>
+                    <select>
+                        <option value="default">Elige una ruta</option>
+                        <option value="CH01">CH01</option>
+                        <option value="PA03">PA03</option>
+                        <option value="VV02">VV02</option>
+                        <option value="CH04">CH04</option>
+                        <option value="SR05">SR05</option>
+                    </select>
+
+                </div>
+                <fieldset>
+                    <legend>Experiencia</legend>
+                    <div class="Experiencia">
+                        <label for="Iniciación">Iniciación</label>
+                        <input type="radio" name="email" id="email" required />
+                        <label for="Media">Media</label>
+                        <input type="radio" name="email" id="email" required />
+                        <label for="Experta">Experta</label>
+                        <input type="radio" name="email" id="email" required />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Material de alquiler</legend>
+                    <div class="Batones">
+                        <label for="Batones">Bastones </label>
+                        <input type="checkbox" name="checkbox" id="checkbox" required />
+                    </div>
+                    <div class="Batones">
+                        <label for="Batones">Linterna frontal </label>
+                        <input type="checkbox" name="checkbox" id="checkbox" required />
+                    </div>
+                    <div class="Batones">
+                        <label for="Batones">Crampones </label>
+                        <input type="checkbox" name="checkbox" id="checkbox" required />
+                    </div>
+                </fieldset>
+                <div class="fecha-nac">
+                    <label for="fecha">Fecha Nacimiento </label>
+                    <input type="date" name="date" id="date" required />
+                </div>
+                <div class="codigo-socio">
+                    <label for="email">Código de socio </label>
+                    <input type="email" name="email" id="email"  placeholder="pendiente" />
+                </div>
+
+                <div class="Acompañantes">
+                    <label for="Acompañantes">Acompañantes (de 0 a 3) </label>
+                    <input type="number" min="0" max="3" id="range" />
+                </div>
+                    <label for="Comentario">Observaciones </label>
+                    <textarea name="comentario"></textarea>
+
+            </fieldset>
+            <div class="Aceptar">
+                
+                <input type="checkbox" id="Aceptar" required />
+                <label for="Aceptar">Acepto la política de privacidad </label>
+            </div>
+            <form action="https://httpbin.org/post" method="post">
+                <div>
+                    <button type="submit">Inscribirme</button>
+            </form>
+            <form action="https://httpbin.org/get" method="get">
+
+                <button type="submit">Guardar borrador</button>
+            </form>
+        </fieldset>
+    </form>
+    </div>
+</body>
+
+</html>
